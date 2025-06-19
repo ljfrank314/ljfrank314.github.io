@@ -60,7 +60,7 @@ body {
 .project-card {
     background: #1a1a1a;
     border: 2px solid #333;
-    padding: 2rem;
+    padding: 1.5rem;
     cursor: pointer;
     transition: all 0.1s linear;
     position: relative;
@@ -113,21 +113,26 @@ body {
     opacity: 0.15;
 }
 
+.project-header{
+    margin-bottom: 1rem;
+}
+
 .project-card h3 {
     font-size: 1.5rem;
     font-weight: 400;
-    margin-bottom: 0.5rem;
+    margin-bottom: .25rem;
 }
 
 .project-card .tech {
     font-size: 0.875rem;
     color: #888;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
 }
 
 .project-card .description {
     color: #ccc;
     line-height: 1.5;
+    margin-top: auto;
 }
 
 /* Project Details Modal */
@@ -174,17 +179,17 @@ body {
 
 .close-btn {
     float: right;
-    font-size: 3rem;
+    font-size: 2.5rem;
+    font-weight: 800;
     color: #999;
     cursor: pointer;
     background: none;
     border: none;
-    padding: 0.1rem;
+    padding-top: .55rem;
 }
 
 .close-btn:hover {
     color: #ff5353;
-    transform: scale(120%);
 }
 
 .details-content h2 {
@@ -195,7 +200,8 @@ body {
 
 .details-content .tech-stack {
     color: #888;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
+    margin-top: 0;
     font-size: 1.1rem;
 }
 
@@ -206,8 +212,8 @@ body {
 }
 
 .details-content .content h3 {
-    margin-top: 2rem;
-    margin-bottom: .5rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
     font-weight: 400;
     color: #fff;
 }
@@ -268,6 +274,9 @@ body {
 
 /* Large screens - 3+ columns */
 @media (min-width: 1200px) {
+    body {
+        zoom: 140%
+    }
     .container {
         padding: 2rem 4rem;
     }
@@ -280,6 +289,10 @@ body {
 
 /* Medium screens - 2 columns */
 @media (min-width: 768px) and (max-width: 1199px) {
+    body {
+        zoom: 100%
+    }
+
     .projects-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
@@ -288,6 +301,10 @@ body {
 
 /* Small screens - 1 column */
 @media (max-width: 767px) {
+    body {
+        zoom: 90%
+    }
+
     .container {
         padding: 1rem;
     }
@@ -304,5 +321,6 @@ body {
     .title-card p {
         font-size: 1rem;
     }
+    
 }
 
