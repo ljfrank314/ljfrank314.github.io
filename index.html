@@ -4,254 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lucas Frank Portfolio</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #0a0a0a;
-            color: #e0e0e0;
-            line-height: 1.6;
-            min-height: 100vh;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        /* Title Card */
-        .title-card {
-            text-align: center;
-            padding: 4rem 0;
-            border-bottom: 1px solid #333;
-            margin-bottom: 4rem;
-        }
-
-        .title-card h1 {
-            font-size: 3rem;
-            font-weight: 300;
-            letter-spacing: -0.02em;
-            margin-bottom: 0.5rem;
-        }
-
-        .title-card p {
-            font-size: 1.2rem;
-            color: #999;
-        }
-
-        /* Project Grid */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-bottom: 4rem;
-        }
-
-        /* Project Card */
-        .project-card {
-            background: #1a1a1a;
-            border: 1px solid #333;
-            padding: 2rem;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .project-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: var(--bg-image);
-            background-size: cover;
-            background-position: center;
-            opacity: 0.15;
-            z-index: 0;
-        }
-
-        .project-card::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(to bottom, 
-                rgba(26, 26, 26, 0.7) 0%, 
-                rgba(26, 26, 26, 0.85) 50%, 
-                rgba(26, 26, 26, 0.95) 100%);
-            z-index: 1;
-        }
-
-        .project-card > * {
-            position: relative;
-            z-index: 2;
-        }
-
-        .project-card:hover {
-            border-color: #666;
-            transform: translateY(-2px);
-        }
-
-        .project-card:hover::before {
-            opacity: 0.25;
-        }
-
-        .project-card h3 {
-            font-size: 1.5rem;
-            font-weight: 400;
-            margin-bottom: 0.5rem;
-        }
-
-        .project-card .tech {
-            font-size: 0.875rem;
-            color: #888;
-            margin-bottom: 1rem;
-        }
-
-        .project-card .description {
-            color: #ccc;
-            line-height: 1.5;
-        }
-
-        /* Project Details Modal */
-        .project-details {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.95);
-            z-index: 1000;
-            overflow-y: auto;
-        }
-
-        .project-details.active {
-            display: block;
-        }
-
-        .details-content {
-            max-width: 800px;
-            margin: 4rem auto;
-            padding: 2rem;
-            background: #0a0a0a;
-            border: 1px solid #333;
-        }
-
-        .close-btn {
-            position: absolute;
-            top: 2rem;
-            right: 2rem;
-            font-size: 2rem;
-            color: #999;
-            cursor: pointer;
-            background: none;
-            border: none;
-            padding: 0.5rem;
-        }
-
-        .close-btn:hover {
-            color: #fff;
-        }
-
-        .details-content h2 {
-            font-size: 2.5rem;
-            font-weight: 300;
-            margin-bottom: 1rem;
-        }
-
-        .details-content .tech-stack {
-            color: #888;
-            margin-bottom: 2rem;
-            font-size: 1.1rem;
-        }
-
-        .details-content .content {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #ddd;
-        }
-
-        .details-content .content h3 {
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            font-weight: 400;
-            color: #fff;
-        }
-
-        .details-content .content ul {
-            margin-left: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .details-content .content a {
-            color: #fff;
-            text-decoration: underline;
-        }
-
-        /* Media */
-        .project-image {
-            width: 100%;
-            margin: 1rem 0;
-            border: 1px solid #333;
-        }
-
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
-            height: 0;
-            margin: 1rem 0;
-        }
-
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 1px solid #333;
-        }
-
-        @media (max-width: 768px) {
-            .title-card h1 {
-                font-size: 2rem;
-            }
-            
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .details-content {
-                margin: 2rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
     <div class="container">
         <!-- Title Card -->
         <div class="title-card">
-            <h1>Your Name</h1>
+            <h1>Lucas Frank</h1>
             <p>Engineering Portfolio</p>
+            <sub>Mechanical engineer with a passion for aerospace systems and space exploration. I specialize in designing and developing mechanical solutions for challenging environments, from concept through fabrication and testing.</sub>
         </div>
 
         <!-- Projects Grid -->
         <div class="projects-grid">
             <!-- Project 1 -->
-            <div class="project-card" onclick="openProject('project1')" style="--bg-image: url('https://via.placeholder.com/400x300/2a2a2a/606060?text=Drone');">
-                <h3>Autonomous Drone Navigation</h3>
-                <p class="tech">Python • ROS • Computer Vision</p>
-                <p class="description">Self-navigating drone system using SLAM and obstacle avoidance algorithms.</p>
+            <div class="project-card" onclick="openProject('project1')" style="--bg-image: url('https://upload.wikimedia.org/wikipedia/commons/8/86/Mercury-Atlas_1_liftoff.jpg');">
+                <h3>giant rocket</h3>
+                <p class="tech">bolts and metal</p>
+                <p class="description">put this together myself in a week. Personal Project</p>
             </div>
 
             <!-- Project 2 -->
@@ -268,21 +38,28 @@
                 <p class="description">6-DOF robotic arm with computer vision for object manipulation.</p>
             </div>
 
-            <!-- Add more project cards as needed -->
+            <!-- Project 4 -->
+            <div class="project-card" onclick="openProject('project4')" style="--bg-image: url('https://www.topmarkfunding.com/wp-content/uploads/2023/06/I80_Closures_in_California_During_the_Summer.jpg');">
+                <h3>US INTERSTATE 80</h3>
+                <p class="tech">Shovel • concrete • time and money</p>
+                <p class="description">Hand paved an entire interstate. Gained expierence in paving roads n </p>
+            </div>
         </div>
     </div>
 
     <!-- Project Details Modals -->
     <div id="project1" class="project-details">
-        <button class="close-btn" onclick="closeProject('project1')">×</button>
         <div class="details-content">
-            <h2>Autonomous Drone Navigation</h2>
-            <p class="tech-stack">Python • ROS • Computer Vision • SLAM</p>
+            <button class="close-btn" onclick="closeProject('project1')">×</button>
+            <h2>giant rocket</h2>
+            <p class="tech-stack">bolts • metal • hard work • sweat off my back</p>
             <div class="content">
                 <h3>Overview</h3>
-                <p>Developed an autonomous navigation system for quadcopter drones capable of navigating complex indoor environments without GPS. The system uses simultaneous localization and mapping (SLAM) combined with real-time obstacle avoidance.</p>
+                <p>built a rocket in my backyard</p>
                 
-                <img src="https://via.placeholder.com/800x450/1a1a1a/808080?text=Drone+Navigation+System" alt="Drone Navigation System" class="project-image">
+                <div class="image-wrapper">
+                    <img src="https://live.staticflickr.com/8785/17615631894_0c5baa8e01_z.jpg" alt="Drone Navigation System" class="project-image">
+                </div>
                 
                 <h3>Technical Details</h3>
                 <ul>
@@ -309,8 +86,9 @@
     </div>
 
     <div id="project2" class="project-details">
-        <button class="close-btn" onclick="closeProject('project2')">×</button>
+
         <div class="details-content">
+            <button class="close-btn" onclick="closeProject('project2')">×</button>
             <h2>IoT Sensor Network</h2>
             <p class="tech-stack">C++ • MQTT • PostgreSQL • Docker</p>
             <div class="content">
@@ -341,8 +119,8 @@
     </div>
 
     <div id="project3" class="project-details">
-        <button class="close-btn" onclick="closeProject('project3')">×</button>
         <div class="details-content">
+            <button class="close-btn" onclick="closeProject('project3')">×</button>
             <h2>Robotic Arm Controller</h2>
             <p class="tech-stack">Python • OpenCV • Kinematics • ROS</p>
             <div class="content">
@@ -375,37 +153,40 @@
         </div>
     </div>
 
-    <script>
-        function openProject(projectId) {
-            document.getElementById(projectId).classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeProject(projectId) {
-            document.getElementById(projectId).classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
-
-        // Close on escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                const activeModal = document.querySelector('.project-details.active');
-                if (activeModal) {
-                    activeModal.classList.remove('active');
-                    document.body.style.overflow = 'auto';
-                }
-            }
-        });
-
-        // Close when clicking outside
-        document.querySelectorAll('.project-details').forEach(modal => {
-            modal.addEventListener('click', function(e) {
-                if (e.target === this) {
-                    this.classList.remove('active');
-                    document.body.style.overflow = 'auto';
-                }
-            });
-        });
-    </script>
+        <div id="project4" class="project-details">
+        <div class="details-content">
+            <button class="close-btn" onclick="closeProject('project4')">×</button>
+            <h2>Robotic Arm Controller</h2>
+            <p class="tech-stack">Python • OpenCV • Kinematics • ROS</p>
+            <div class="content">
+                <h3>Overview</h3>
+                <p>Built a computer vision-guided robotic arm system capable of identifying, grasping, and sorting objects by color and shape. The system uses inverse kinematics for precise movement control.</p>
+                
+                <img src="https://via.placeholder.com/800x450/1a1a1a/808080?text=Robotic+Arm+Setup" alt="Robotic Arm Setup" class="project-image">
+                
+                <h3>Technical Details</h3>
+                <ul>
+                    <li>6-DOF arm with custom inverse kinematics solver</li>
+                    <li>Object detection using OpenCV and custom trained YOLO model</li>
+                    <li>Trajectory planning with collision avoidance</li>
+                    <li>ROS integration for modular control architecture</li>
+                </ul>
+                
+                <h3>Demo Video</h3>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                
+                <h3>Results</h3>
+                <p>Achieved 92% accuracy in object sorting tasks with an average cycle time of 8 seconds per object. System can handle objects ranging from 2cm to 15cm in size.</p>
+                
+                <img src="https://via.placeholder.com/800x450/1a1a1a/808080?text=Object+Detection+Results" alt="Object Detection Results" class="project-image">
+                
+                <h3>Links</h3>
+                <p><a href="#">GitHub Repository</a> • <a href="#">Technical Paper</a></p>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
