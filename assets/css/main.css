@@ -6,7 +6,7 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background: #0a0a0a;
+    background: #141414;
     color: #e0e0e0;
     line-height: 1.6;
     zoom: 140%;
@@ -105,7 +105,7 @@ body {
 }
 
 .project-card:hover {
-    border-color: #77ff92;
+    border-color: #ffffff;
     transform: translateY(-2px);
 }
 
@@ -126,7 +126,7 @@ body {
 .project-card .tech {
     font-size: 0.875rem;
     color: #888;
-    margin-bottom: 0;
+    margin-bottom: 0.5rem;
 }
 
 .project-card .description {
