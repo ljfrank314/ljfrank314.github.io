@@ -234,40 +234,72 @@
     </div>
 </div>
 
-    <div id="project3" class="project-details">
-        <div class="details-content">
-            <button class="close-btn" onclick="closeProject('project3')">×</button>
-            <h2>Robotic Arm Controller</h2>
-            <p class="tech-stack">Python • OpenCV • Kinematics • ROS</p>
-            <div class="content">
-                <h3>Overview</h3>
-                <p>Built a computer vision-guided robotic arm system capable of identifying, grasping, and sorting objects by color and shape. The system uses inverse kinematics for precise movement control.</p>
-                
-                <img src="https://via.placeholder.com/800x450/1a1a1a/808080?text=Robotic+Arm+Setup" alt="Robotic Arm Setup" class="project-image">
-                
-                <h3>Technical Details</h3>
-                <ul>
-                    <li>6-DOF arm with custom inverse kinematics solver</li>
-                    <li>Object detection using OpenCV and custom trained YOLO model</li>
-                    <li>Trajectory planning with collision avoidance</li>
-                    <li>ROS integration for modular control architecture</li>
-                </ul>
-                
-                <h3>Demo Video</h3>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" rel="0" frameborder="0" allow="accelerometer; modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"></iframe>
-                </div>
-                
-                <h3>Results</h3>
-                <p>Achieved 92% accuracy in object sorting tasks with an average cycle time of 8 seconds per object. System can handle objects ranging from 2cm to 15cm in size.</p>
-                
-                <img src="https://via.placeholder.com/800x450/1a1a1a/808080?text=Object+Detection+Results" alt="Object Detection Results" class="project-image">
-                
-                <h3>Links</h3>
-                <p><a href="#">GitHub Repository</a> • <a href="#">Technical Paper</a></p>
+
+<div id="project3" class="project-details">
+    <div class="details-content">
+        <button class="close-btn" onclick="closeProject('project3')">×</button>
+        <h2>ESP32 RGB LED Controller</h2>
+        <p class="tech-stack">Embedded Systems • KiCad • C++ • Python • IoT</p>
+        <div class="content">
+            <h3>The Challenge: Diving into Embedded Systems</h3>
+            <p>Coming from mechanical engineering with zero embedded experience, I wanted complete control over the RGB lighting in my college apartment. Rather than buying off-the-shelf controllers, I decided to build my own ESP32-based system from scratch. These controllers can talk to everything from my Apple Watch to my Arch server through simple HTTP requests.</p>
+            
+            <p>The goal was ambitious: design custom PCBs, write firmware with smooth animations, and deploy controllers to every room. This project forced me completely outside my comfort zone, but gave me hands-on experience with full ownership of both hardware and software.</p>
+            
+            <div class="image-wrapper">
+                <img src="https://lfrank.xyz/assets/images/IMG_3942.jpg" alt="Custom PCB with ESP32-C3" class="project-image">
+                <p class="image-caption">Final SMD PCB design with ESP32-C3 and MOSFET drivers</p>
             </div>
+            
+            <h3>Hardware</h3>
+            <p>Started with through-hole components on perfboard to prove the concept. I selected MOSFETs from Digikey using crude but effective methods: set my power supply to 24V (matching the LED strips), measured current draw, and chose components with appropriate voltage/current ratings. I had several SEEED XIAO ESP32-C3's leftover from a simpler project, and implemented them in the prototype.</p>
+            
+            <p>After validating the circuit, I transitioned to SMD PCBs to reduce costs and gain experience. Playing around with my ancient oscilloscope, I found the flat miller region on the rising edge of my mosfets. After further research, (and learning what the hell the miller region was), I decided to implement gate drivers to mitigate switching inefficiencies. Assembly was done with a hot air gun and patience, no reflow oven needed for small quantities.</p>
+
+            <div class="image-wrapper">
+                <img src="https://lfrank.xyz/assets/images/rgbGerber.png" alt="PCB Gerber File" class="project-image">
+                <p class="image-caption">PCB Gerber file</p>
+            </div>
+            
+            <h3>Software</h3>
+            <p>Built a real-time animation system around HTTP endpoints that could queue color transitions with custom timing curves. The core innovation was using a single mathematical function (found on StackOverflow, of course) with varying the alpha parameter to create different wave shapes:</p>
+            <ul>
+                <li><strong>α = 1:</strong> Linear interpolation (sawtooth waves)</li>
+                <li><strong>α = 2-10:</strong> Smooth easing functions (sine-like waves)</li>
+                <li><strong>α > 10:</strong> Step transitions (square waves)</li>
+            </ul>
+            
+            <div class="image-wrapper">
+                <img src="https://lfrank.xyz/assets/images/programFlow.svg" alt="Simplified program flowchart" class="project-image">
+                <p class="image-caption">Basic program flow</p>
+            </div>
+            
+            <h3>Debugging Boot Issues</h3>
+            <p>The controllers frequently got stuck in loops as I learned the basics of c++, making re-flashing difficult. Through debugging, I discovered I'd connected some traces to gpio pins that also served as boot configuration pins. When these pins were pulled high or low by my circuit, the ESP32 would enter different boot modes, making flashing difficult. While the boards functioned when flashed, this was a major roadblock for some time.</p>
+            
+            <p>Problems like this served as reminders as to how much I have to learn with embedded systems. Little issues like that are learned practically and only through experience.</p>
+            
+            <h3>Distributed Control & Synchronization</h3>
+            <p>Each controller operated independently with its own web server, but synchronization across rooms was achieved through timed HTTP requests. Since everything ran on the local network, latency was minimal and coordination worked reliably. This architecture allowed control from Python scripts, iOS shortcuts, direct curl commands, any device that could send http requests.</p>
+            
+            <h3>Technical Lessons Learned</h3>
+            <p>This project helped me understand that embedded development involves balancing capabilities with constraints. Memory fragmentation concerns led me to avoid complex data structures, which pushed me toward simpler solutions using structs and arrays rather than classes and queues. The controllers stayed on for months without a single crash or noticeable bug!</p>
+            
+            <p>As someone coming from mechanical engineering, tackling embedded systems required starting with basic prototypes and gradually building complexity; starting with through hole prototypes, onto PCB design, SMD assembly, and fumbling around in C++ until I got something useful. It was an incredibly fulfilling project.</p>
+            
+            <div class="image-wrapper">
+                <img src="#" alt="Controllers deployed in apartment" class="project-image">
+                <p class="image-caption">Controllers successfully deployed throughout the apartment</p>
+            </div>
+            
+            <h3>Results</h3>
+            <p>Successfully deployed controllers to every room in the apartment, each running stable firmware with smooth color transitions. The system integrated with existing smart home infrastructure and provided the control flexibility I was looking for.</p>
+            
+            <h3>Links</h3>
+            <p><a href="https://github.com/ljfrank314/ESP32C3_RGB_Controller">GitHub Repository</a></p>
         </div>
     </div>
+</div>
 
         <div id="project4" class="project-details">
         <div class="details-content">
