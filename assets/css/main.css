@@ -23,6 +23,7 @@ body {
 .title-card {
     text-align: center;
     padding: 2rem 0;
+    padding-bottom: 1rem;
     border-bottom: 1px solid #333;
     margin-bottom: 2rem;
 }
@@ -31,7 +32,7 @@ body {
     font-size: 4rem;
     font-weight: 600;
     letter-spacing: 0.04em;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
 }
 
 .title-card p {
@@ -39,12 +40,19 @@ body {
     font-weight: 600;
     color: #999;
     margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 
 .title-card sub {
     font-size: 1rem;
     font-weight: 600;
     color: #888;
+}
+
+.title-card a {
+    color: #fff;
+    text-decoration: underline;
+    font-size: 1rem;
 }
 
 /* Project Grid */
