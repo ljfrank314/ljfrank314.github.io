@@ -218,6 +218,11 @@ body {
     color: #fff;
 }
 
+.details-content .content p {
+    margin-top: auto;
+    margin-bottom: 1rem;
+}
+
 .details-content .content ul {
     margin-left: 1.5rem;
     margin-bottom: 1rem;
@@ -236,7 +241,7 @@ body {
 
 .project-image {
     max-width: 100%;
-    max-height: 40vh;
+    max-height: 20rem;
     margin: 1rem 0;
     border: 4px solid #333;
     display: inline-block;
@@ -256,6 +261,100 @@ body {
     width: 100%;
     height: 100%;
     border: 1px solid #333;
+}
+
+/* Slideshow styles */
+.slide {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.1s ease;
+    pointer-events: none;
+}
+
+.slide.active {
+    position: relative;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Update slideshow container to handle absolute positioning */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin: 1rem 0;
+    /* Height will be set by the active slide */
+}
+
+/* Ensure images maintain their aspect ratio */
+.slide img {
+    max-width: 100%;
+    max-height: 20rem;
+    display: block;
+    margin: 0 auto;
+}
+/* Slideshow controls */
+.slideshow-controls {
+    text-align: center;
+    margin-top: 1rem;
+    position: relative;
+    z-index: 10;
+}
+
+.slide-caption {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    color: #999;
+    font-style: italic;
+    font-size: 0.95rem;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.slide-prev,
+.slide-next {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    background: #1a1a1a;
+    border: 1px solid #333;
+    color: #999;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.slide-prev:hover,
+.slide-next:hover {
+    color: #fff;
+    border-color: #666;
+}
+
+/* Slide indicators */
+.slide-indicators {
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+.dot {
+    height: 8px;
+    width: 8px;
+    margin: 0 4px;
+    background-color: #333;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #999;
+}
+
+.dot:hover {
+    background-color: #666;
 }
 
 @media (max-width: 768px) {
