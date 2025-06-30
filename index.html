@@ -233,7 +233,6 @@
         </div>
     </div>
 </div>
-<!-- THERE ARE GRAMMAR ISSUES UP THE REAR ON THIS ONE JUST FYI \/ \/ \/ \/ -->
 
 <div id="project3" class="project-details">
     <div class="details-content">
@@ -252,7 +251,7 @@
             </div>
             
             <h3>Hardware</h3>
-            <p>Started with through-hole components on perfboard to prove the concept. I selected MOSFETs from Digikey using a simple method; I set my power supply to 24V (matching the LED strips), measured current draw from the power supply, and chose components with appropriate voltage/current ratings. I had several Seeed XIAO ESP32-C3's leftover from a simpler project, and implemented them in the prototype.</p>
+            <p>Started with through-hole components on perfboard to prove the concept. I selected MOSFETs from Digikey using a simple method; I set my power supply to 24V (matching the LED strips), measured current draw from the power supply, and chose components with appropriate voltage/current ratings. I had several Seeed XIAO ESP32-C3's leftover from a simpler project, and implemented one in the prototype.</p>
             
             <p>After validating the circuit, I transitioned to SMD PCBs to reduce costs and gain experience. Playing around with my ancient oscilloscope, I found the flat miller region on the rising edge of my mosfets. After further research, (and learning what the hell the miller region was), I decided to implement gate drivers to mitigate switching inefficiencies. Assembly was done with a hot air gun and patience, no reflow oven needed for small quantities.</p>
 
@@ -288,7 +287,7 @@
             <p>As someone coming from mechanical engineering, tackling embedded systems required starting with basic prototypes and gradually building complexity; starting with through hole prototypes, onto PCB design, SMD assembly, and fumbling around in C++ until I got something useful. It was an incredibly fulfilling project.</p>
             
             <div class="image-wrapper">
-                <img src="solderStation.JPG" alt="First controllers immediately after soldering" class="project-image">
+                <img src="https://lfrank.xyz/assets/images/solderStation.JPG" alt="First controllers immediately after soldering" class="project-image">
                 <p class="image-caption">The first two controllers after completion</p>
             </div>
             
@@ -320,12 +319,12 @@
                 </ul>
                 
                 <div class="image-wrapper">
-                    <img src="robotArmHandCalcs.png" alt="Hand calculations" class="project-image">
+                    <img src="https://lfrank.xyz/assets/images/robotArmHandCalcs.png" alt="Hand calculations" class="project-image">
                     <p class="image-caption">The quick hand calcs done to spec the motors</p>
                 </div>
                 
                 <div class="image-wrapper">
-                    <img src="coffeeArm-CAD.png" alt="Robot Arm CAD" class="project-image">
+                    <img src="https://lfrank.xyz/assets/images/coffeeArm-CAD.png" alt="Robot Arm CAD" class="project-image">
                     <p class="image-caption">The detailed CAD model of the robot arm.</p>
                 </div>
 
@@ -334,7 +333,7 @@
                 <p>As I only had a few weeks to work on the whole project, the simulation ended up being very simple; inverse kinematics are solved to put the end effector in preset points, the motion planning then just interpolates the joints to move from one position to the other. So the target points are solved for in task space but movement is done in joint space.</p>
 
                 <div class="image-wrapper">
-                <img src="robotArmAnim.gif" alt="Animation from simulation" class="project-image">
+                <img src="https://lfrank.xyz/assets/images/robotArmAnim.gif" alt="Animation from simulation" class="project-image">
                 <p class="image-caption">During the live demo I did for the class, someone asked me to make the robot pour the mug on my lap</p>
                 </div>
                 
