@@ -13,6 +13,8 @@
             <h1>Lucas Frank</h1>
             <p>Engineering Portfolio</p>
             <sub>Mechanical engineer with a passion for aerospace systems and space exploration. I specialize in designing and developing mechanical solutions for challenging environments, from concept through fabrication and testing.</sub>
+            <p><a href="https://linkedin.com/in/ljfrank">LinkedIn</a></p>
+            
         </div>
 
         <!-- Projects Grid -->
@@ -28,7 +30,7 @@
             <div class="project-card" onclick="openProject('project2')" style="--bg-image: url('https://lfrank.xyz/assets/images/IMG_2105.jpg');">
                 <h3>Constant Force DTVACC Mechanism</h3>
                 <p class="tech">Linkage Analysis • ONSHAPE • CAM • Rapid Prototyping</p>
-                <p class="description">Designed, manufactured, and implented a passive, constant force applicator in 4 weeks. This mechanism was crucial to Ai Spacefactory being awarded an STTR phase 2 contract.</p>
+                <p class="description">Designed, manufactured, and implented a passive, constant force applicator in 4 weeks. This mechanism was instrumental to Ai Spacefactory being awarded an STTR phase 2 contract.</p>
             </div>
 
             <!-- Project 3 -->
@@ -55,22 +57,22 @@
             <p class="tech-stack">ANSYS • ONSHAPE • Team Leadership • Rapid Prototyping</p>
             <div class="content">
                 <h3>My Role: Chassis Team Lead</h3>
-                <p>Joined after Level 1 design, leading a 6-person subteam through fabrication, testing, and complete redesign of a 375 kg lunar excavation rover chassis. Responsible for all structural systems from concept through integration.</p>
+                <p>Joined the Planetary Surface Technology Development Lab (PSTDL) after Level 1 design, leading the 3-person subteam through fabrication, testing, and complete redesign of a 375 kg lunar excavation rover's chassis. Responsible for integration of all structural systems into rover as well as a novel drivetrain design.</p>
                 
                 <div class="slideshow-container">
                     <div class="slide active">
                         <img src="https://lfrank.xyz/assets/images/Drivetrain_lvl1.png" alt="PRIMROSE Rover">
-                        <p class="slide-caption">I joined after the PSTDL won $75,000 with their Phase 2 Level 1 proposal. The rover design was largely unfinalized and unmanufacturable at that point.</p>
+                        <p class="slide-caption">Level 1 design.</p>
                     </div>
                     
                     <div class="slide">
                         <img src="https://lfrank.xyz/assets/images/Drivetrain_lvl2.png" alt="Chassis Design">
-                        <p class="slide-caption">Level 2 vs Level 3 rover comparison showing evolution of design - from initial manufacturability fixes to complete chassis overhaul.</p>
+                        <p class="slide-caption">Level 2 design. Changes limited to enabling manufacturability.</p>
                     </div>
                     
                     <div class="slide">
                         <img src="https://lfrank.xyz/assets/images/Drivetrain_lvl3.png" alt="Team Photo">
-                        <p class="slide-caption">For Phase 2 Level 3 several failed aspects of the rover needed to be completely overhauled. Redesigned high load structures were verified with ANSYS as the team modified the rover for larger wheels and a wider wheelbase.</p>
+                        <p class="slide-caption">Level 3 design. Complete overhaul of rover, including drivetrain.</p>
                     </div>
                     
                     <div class="slideshow-controls">
@@ -91,47 +93,52 @@
                     <li>3D printed if possible (brackets, spacers)</li>
                     <li>Bent sheet metal + rivets (no welding required)</li>
                     <li>Bent sheet metal + welded joints</li>
-                    <li>Simple miter cuts + welding</li>
-                    <li>In-house machining only when unavoidable</li>
+                    <li>Square tubing + welding</li>
+                    <li>In-house machining utilized only when unavoidable</li>
                 </ul>
-                <p>This approach let us build fast and iterate faster - critical when discoveries during integration demanded immediate redesigns.</p>
+                <p>This approach let us build fast and iterate faster; critical when discoveries during integration demanded immediate redesigns. Even the most expensive option, making billet parts, was done in house by team members to save cost.</p>
                 
-                <h3>Level 2: Making It Work</h3>
-                <p>Inherited a paper design that needed manufacturability fixes. Built the steel frame without time for FEA - pure experience-based design. Key contributions:</p>
+                <h3>Level 2: Bringing PRIMROSE to Life</h3>
+                <p>Inherited a conceptual design that needed manufacturability fixes. Key contributions:</p>
                 <ul>
                     <li>Resolved geometric interferences in CAD before cutting metal</li>
                     <li>Designed serviceable subassemblies (learned from automotive work)</li>
                     <li>Modified existing suspension hardware for 15-day endurance test</li>
-                    <li><strong>Result:</strong> 30,063m traversed, A-arm mounts being the only critical failure</li>
+                    <li><strong>Result:</strong> 30,063m traversed, 2987.2 kg excavated and dumped</li>
                 </ul>
                 
                 <div class="image-wrapper">
-                    <img src="https://lfrank.xyz/assets/images/Drivetrain_lvl2.png" alt="Level 2 rover during endurance test" class="project-image">
+                    <img src="https://lfrank.xyz/assets/images/primrose_level2.jpg" alt="Level 2 rover during endurance test" class="project-image">
                     <p class="image-caption">Level 2 rover during endurance test showing original configuration</p>
                 </div>
                 
-                <h3>Level 3: Complete Chassis Overhaul</h3>
-                <p>Chief engineer set new requirements: wider wheelbase for stability, larger wheels to prevent sinking in regolith, 30°/30° steering capability. My execution:</p>
+                <h3>Level 3: Huntsville or Bust</h3>
+                <p>The rover was constantly down for maintenance, necessitating a rework. Worked with chief engineer and team to set new requirements, mainly: wider wheelbase for stability, larger wheels to prevent sinking in sand or regolith, 30°/30° steering capability for better maneuverability. Key contributions:</p>
                 
                 <h4>Structural Redesign:</h4>
                 <ul>
-                    <li>Converted internal frame from steel to aluminum (weight savings for new electrical system)</li>
-                    <li>Widened wheelbase through new suspension geometry</li>
+                    <li>Converted internal frame from steel to aluminum (weight savings + new electrical system)</li>
+                    <li>Added frame brackets to accommodate larger wheels and wider wheelbase</li>
                     <li>ANSYS FEA with aggressive FoS (verified against hand calcs)</li>
-                    <li>Maintained top-down CAD architecture in Onshape for team coordination</li>
+                    <li>Maintained top-down CAD architecture in Onshape, enabling fast design changes</li>
                 </ul>
+
+                <div class="image-wrapper">
+                    <img src="https://lfrank.xyz/assets/images/framefea.gif" alt="Gif showing ansys analysis" class="project-image">
+                    <p class="image-caption">ANSYS quasi-static analysis with frame constrained by free sliding wheels</p>
+                </div>
                 
-                <h4>Suspension Revolution:</h4>
+                <h4>Suspension Overhaul:</h4>
                 <ul>
-                    <li>Adapted existing kinematic layout to new wheel envelope</li>
-                    <li>Converted failed bolted joints to shoulder bolt system</li>
-                    <li>Precision-machined components where 3D printing couldn't meet tolerances</li>
-                    <li>Accommodated steering actuators for crab-walk capability</li>
+                    <li>Adapted existing kinematic layout geometry to new wheel envelope</li>
+                    <li>Redesigned A-arm mounts and most suspension components </li>
+                    <li>Modified frame to support extended wheelbase and larger wheels</li>
+                    <li>Implemented 30°/30° steering angle</li>
                 </ul>
                 
                 <div class="image-wrapper">
-                    <img src="https://lfrank.xyz/assets/images/Drivetrain_lvl3.png" alt="New suspension assembly" class="project-image">
-                    <p class="image-caption">New suspension assembly showing wider track width and improved mounting</p>
+                    <img src="https://lfrank.xyz/assets/images/SuspensionChanges.png" alt="New suspension assembly" class="project-image">
+                    <p class="image-caption">Level 3 (left) vs Level 2 (right) suspension assembly</p>
                 </div>
                 
                 <h3>Integration Under Fire</h3>
@@ -141,91 +148,158 @@
                     <li>On-the-fly modifications when reality didn't match CAD</li>
                     <li>Balancing "perfect" vs "good enough" to meet deadlines</li>
                 </ul>
-                <p><strong>The payoff:</strong> 85% excavation rate improvement enabled by a chassis that could handle the increased loads.</p>
+                <p><strong>The payoff:</strong> 85% excavation rate improvement enabled by a chassis that could handle the increased loads, and 100% drivetrain reliability.</p>
                 
                 <h3>Final Results & Reflection</h3>
-                <p>The rover secured 3rd place overall at NASA Marshall, validating our scrappy approach against teams with significantly larger budgets. More importantly, this project transformed my engineering practice. The PSTDL gave me the freedom to fail fast, build faster, and learn from both. Working alongside a team that trusted a junior engineer to redesign critical systems taught me that good engineering isn't about perfection - it's about making the right compromises under pressure.</p>
+                <p>The rover secured 3rd place overall at NASA's Break the Ice Lunar Challenge, validating our scrappy approach against teams with significant industry backing. More importantly, this project transformed my engineering practice. The PSTDL gave me the freedom to fail fast and get hands on. Working alongside a team that trusted an undergrad to work as an engineer, designing and redesigning critical systems, taught me that good engineering isn't about perfection; it's about making the right compromises under pressure.</p>
                 
                 <div class="image-wrapper">
-                    <img src="https://live.staticflickr.com/8785/17615631894_0c5baa8e01_z.jpg" alt="Team at NASA facility" class="project-image">
-                    <p class="image-caption">Team photo at NASA facility - every dent in that frame represents a lesson learned</p>
+                    <img src="https://lfrank.xyz/assets/images/primrose_team.jpg" alt="Team after successful competition performance" class="project-image">
+                    <p class="image-caption">Team photo after successful competition</p>
                 </div>
-                
-                <p>Every dent in that frame represents a lesson learned. Every redesigned bracket reflects feedback from teammates who knew their systems better than I ever could. This wasn't just a competition rover - it was 18 months of compressed engineering education that shaped how I approach every project since.</p>
-                
-                <h3>Links</h3>
-                <p><a href="#">GitHub Repository</a> • <a href="#">Video Demo</a></p>
-            </div>
-        </div>
-    </div>
 
-    <div id="project2" class="project-details">
-
-        <div class="details-content">
-            <button class="close-btn" onclick="closeProject('project2')">×</button>
-            <h2>IoT Sensor Network</h2>
-            <p class="tech-stack">C++ • MQTT • PostgreSQL • Docker</p>
-            <div class="content">
-                <h3>Overview</h3>
-                <p>Designed and deployed a scalable IoT sensor network for environmental monitoring across multiple sites. The system collects temperature, humidity, air quality, and noise level data from 50+ distributed sensors.</p>
-                
-                <img src="https://via.placeholder.com/800x450/1a1a1a/808080?text=Sensor+Network+Architecture" alt="Sensor Network Architecture" class="project-image">
-                
-                <h3>Technical Details</h3>
-                <ul>
-                    <li>Custom firmware written in C++ for ESP32 microcontrollers</li>
-                    <li>MQTT broker for efficient message passing with QoS guarantees</li>
-                    <li>Time-series database (PostgreSQL + TimescaleDB) for data storage</li>
-                    <li>Real-time dashboard using WebSockets for live monitoring</li>
-                </ul>
-                
-                <img src="https://via.placeholder.com/800x450/1a1a1a/808080?text=Dashboard+Screenshot" alt="Dashboard Screenshot" class="project-image">
-                
-                <h3>Results</h3>
-                <p>System has been running continuously for 18 months with 99.7% uptime. Processes over 1 million sensor readings daily with sub-second latency from sensor to dashboard.</p>
-                
-                <img src="https://via.placeholder.com/800x450/1a1a1a/808080?text=Performance+Metrics" alt="Performance Metrics" class="project-image">
-                
-                <h3>Links</h3>
-                <p><a href="#">GitHub Repository</a> • <a href="#">Live Dashboard</a></p>
-            </div>
-        </div>
-    </div>
-
-    <div id="project3" class="project-details">
-        <div class="details-content">
-            <button class="close-btn" onclick="closeProject('project3')">×</button>
-            <h2>Robotic Arm Controller</h2>
-            <p class="tech-stack">Python • OpenCV • Kinematics • ROS</p>
-            <div class="content">
-                <h3>Overview</h3>
-                <p>Built a computer vision-guided robotic arm system capable of identifying, grasping, and sorting objects by color and shape. The system uses inverse kinematics for precise movement control.</p>
-                
-                <img src="https://via.placeholder.com/800x450/1a1a1a/808080?text=Robotic+Arm+Setup" alt="Robotic Arm Setup" class="project-image">
-                
-                <h3>Technical Details</h3>
-                <ul>
-                    <li>6-DOF arm with custom inverse kinematics solver</li>
-                    <li>Object detection using OpenCV and custom trained YOLO model</li>
-                    <li>Trajectory planning with collision avoidance</li>
-                    <li>ROS integration for modular control architecture</li>
-                </ul>
-                
-                <h3>Demo Video</h3>
+                <h3>NASA Video</h3>
                 <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" rel="0" frameborder="0" allow="accelerometer; modestbranding; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/z-Kc-EwKOro?si=seq2e11nYhZ7GSjY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; modestbranding; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
                 
-                <h3>Results</h3>
-                <p>Achieved 92% accuracy in object sorting tasks with an average cycle time of 8 seconds per object. System can handle objects ranging from 2cm to 15cm in size.</p>
-                
-                <img src="https://via.placeholder.com/800x450/1a1a1a/808080?text=Object+Detection+Results" alt="Object Detection Results" class="project-image">
+                <p>I cannot thank the PSTDL enough for the opportunity to be on such an amazing team.</p>
                 
                 <h3>Links</h3>
-                <p><a href="#">GitHub Repository</a> • <a href="#">Technical Paper</a></p>
+                <p><a href="https://huskyworks.space/projects/btic">PSTDL</a> • <a href="https://breaktheicechallenge.com/">NASA's Break The Ice</a></p>
             </div>
         </div>
     </div>
+
+<div id="project2" class="project-details">
+    <div class="details-content">
+        <button class="close-btn" onclick="closeProject('project2')">×</button>
+        <h2>Constant Force DTVACC Mechanism</h2>
+        <p class="tech-stack">Linkage Analysis • ONSHAPE • CAM • Rapid Prototyping</p>
+        <div class="content">
+            <h3>The Challenge: 4 Weeks to Enable Critical Testing</h3>
+            <p>Fresh off our success at NASA's Break the Ice Challenge, the deadline to test for one client, AI SpaceFactory, was rapidly approaching. We had to design and build a mechanism to apply 10 lbs of constant force to their lunar road-paving technology for testing in the Planetary Surface Technology Development Lab (PSTDL) Dusty Thermal Vacuum Chamber (DTVACC). We had just over 4 weeks before their scheduled test date.</p>
+            
+            <p>While the rest of the small team worked to get our regolith bed gantry motorized, I was assigned as the sole engineer on the constant force mechanism. I was responsible for concept development through final integration. The mechanism needed to maintain a constant force across 5 inches of vertical travel to accommodate road surface variations while surviving vacuum conditions.</p>
+            
+            <div class="image-wrapper">
+                <img src="https://lfrank.xyz/assets/images/wheelAnimation.gif" alt="Constant force mechanism CAD model" class="project-image">
+                <p class="image-caption">Final mechanism design showing lever arm and wheel assembly</p>
+            </div>
+            
+            <h3>The Solution: Maximize Simplicity</h3>
+            <p>Rather than complex active control systems, I developed a purely passive mechanism that exploited two competing non-linear effects:</p>
+            <ul>
+                <li><strong>Variable radius cam effect:</strong> As the wheel displaces vertically, the perpendicular distance from the spring's line of action to the pivot varies non-linearly</li>
+                <li><strong>Toggle mechanism principle:</strong> Approaching kinematic singularity near 180° transmission angle creates exponentially increasing mechanical advantage</li>
+            </ul>
+
+            <div class="image-wrapper">
+                <img src="https://lfrank.xyz/assets/images/wheelForce.png" alt="Wheel force for a given deflection angle" class="project-image">
+                <p class="image-caption">Spreadsheet plot of wheel force over angle range</p>
+            </div>
+            
+            <p>By carefully tuning the torsion spring selection and lever arm geometry, these effects cancelled out to produce near-constant force (±1 lb) across the entire travel range. Spreadsheet analysis proved the concept before moving to CAD.</p>
+            
+            <h3>Rapid Development Timeline</h3>
+            <ul>
+                <li><strong>Week 1:</strong> Mathematical proof of concept and spring selection</li>
+                <li><strong>Week 2:</strong> Parametric CAD development and sheet metal orders</li>
+                <li><strong>Weeks 3-4:</strong> In-house CNC machining of precision bearing blocks, assembly, and integration</li>
+            </ul>
+            
+            <p>The parametric, top-down CAD approach proved critical when last-minute changes were needed. Our sheet metal supplier rejected my initial files, requiring a redesign of several parts; however, because the design was fully top-down, the fix took less than an hour and the assembly updated automatically. Every component was designed for rapid fabrication: sheet metal where possible, 3D printing for non-critical parts, and machining only when necessary meant only 3 parts needed to be made in house.</p>
+            
+            <div class="image-wrapper">
+                <img src="https://lfrank.xyz/assets/images/tweelCAM.png" alt="CAM for bearing mounts" class="project-image">
+                <p class="image-caption">CAM toolpath for bearing mounts</p>
+            </div>
+            
+            <h3>Results & Lessons Learned</h3>
+            <p>The mechanism functioned well during testing, enabling AI SpaceFactory to validate their paved lunar road under realistic loading conditions. The successful test was instrumental in securing their STTR Phase 2 contract.</p>
+
+            <div class="image-wrapper">
+                <img src="https://lfrank.xyz/assets/images/tweelTest.jpg" alt="Mechanism during DTVACC testing" class="project-image">
+                <p class="image-caption">Mechanism undergoing testing in the DTVACC</p>
+            </div>
+
+            <p>This project taught me valuable lessons about managing aggressive timelines and client expectations. While we delivered a working solution, the 12-hour days and extreme time pressure highlighted the importance of realistic project scoping. Working under tight constraints can give way to creative solutions, but also creates an environment for failure.</p>
+            
+            <h3>Technical Takeaway</h3>
+            <p>Good engineering under pressure isn't about perfection; it's about finding elegant solutions that work within constraints. By leveraging fundamental mechanical principles instead of active control systems, we delivered a robust mechanism that met all requirements under an extremely tight deadline.</p>
+            
+            <h3>Links</h3>
+            <p><a href="https://huskyworks.space/facilities/dtvac">PSTDL DTVACC</a> • <a href="https://spacefactory.ai/lunar-road">AI SpaceFactory</a></p>
+        </div>
+    </div>
+</div>
+
+
+<div id="project3" class="project-details">
+    <div class="details-content">
+        <button class="close-btn" onclick="closeProject('project3')">×</button>
+        <h2>ESP32 RGB LED Controller</h2>
+        <p class="tech-stack">Embedded Systems • KiCad • C++ • Python • IoT</p>
+        <div class="content">
+            <h3>The Challenge: Diving into Embedded Systems</h3>
+            <p>Coming from mechanical engineering with zero embedded experience, I wanted complete control over the RGB lighting in my college apartment. Rather than buying off-the-shelf controllers, I decided to build my own ESP32-based system from scratch. These controllers can talk to everything from my Apple Watch to my Arch server through simple HTTP requests.</p>
+            
+            <p>The goal was ambitious: design custom PCBs, write firmware with smooth animations, and deploy controllers to every room. This project forced me completely outside my comfort zone, but gave me hands-on experience with full ownership of both hardware and software.</p>
+            
+            <div class="image-wrapper">
+                <img src="https://lfrank.xyz/assets/images/IMG_3942.jpg" alt="Custom PCB with ESP32-C3" class="project-image">
+                <p class="image-caption">Final SMD PCB design with ESP32-C3 and MOSFET drivers</p>
+            </div>
+            
+            <h3>Hardware</h3>
+            <p>Started with through-hole components on perfboard to prove the concept. I selected MOSFETs from Digikey using crude but effective methods: set my power supply to 24V (matching the LED strips), measured current draw, and chose components with appropriate voltage/current ratings. I had several SEEED XIAO ESP32-C3's leftover from a simpler project, and implemented them in the prototype.</p>
+            
+            <p>After validating the circuit, I transitioned to SMD PCBs to reduce costs and gain experience. Playing around with my ancient oscilloscope, I found the flat miller region on the rising edge of my mosfets. After further research, (and learning what the hell the miller region was), I decided to implement gate drivers to mitigate switching inefficiencies. Assembly was done with a hot air gun and patience, no reflow oven needed for small quantities.</p>
+
+            <div class="image-wrapper">
+                <img src="https://lfrank.xyz/assets/images/rgbGerber.png" alt="PCB Gerber File" class="project-image">
+                <p class="image-caption">PCB Gerber file</p>
+            </div>
+            
+            <h3>Software</h3>
+            <p>Built a real-time animation system around HTTP endpoints that could queue color transitions with custom timing curves. The core innovation was using a single mathematical function (found on StackOverflow, of course) with varying the alpha parameter to create different wave shapes:</p>
+            <ul>
+                <li><strong>α = 1:</strong> Linear interpolation (sawtooth waves)</li>
+                <li><strong>α = 2-10:</strong> Smooth easing functions (sine-like waves)</li>
+                <li><strong>α > 10:</strong> Step transitions (square waves)</li>
+            </ul>
+            
+            <div class="image-wrapper">
+                <img src="https://lfrank.xyz/assets/images/programFlow.svg" alt="Simplified program flowchart" class="project-image">
+                <p class="image-caption">Basic program flow</p>
+            </div>
+            
+            <h3>Debugging Boot Issues</h3>
+            <p>The controllers frequently got stuck in loops as I learned the basics of c++, making re-flashing difficult. Through debugging, I discovered I'd connected some traces to gpio pins that also served as boot configuration pins. When these pins were pulled high or low by my circuit, the ESP32 would enter different boot modes, making flashing difficult. While the boards functioned when flashed, this was a major roadblock for some time.</p>
+            
+            <p>Problems like this served as reminders as to how much I have to learn with embedded systems. Little issues like that are learned practically and only through experience.</p>
+            
+            <h3>Distributed Control & Synchronization</h3>
+            <p>Each controller operated independently with its own web server, but synchronization across rooms was achieved through timed HTTP requests. Since everything ran on the local network, latency was minimal and coordination worked reliably. This architecture allowed control from Python scripts, iOS shortcuts, direct curl commands, any device that could send http requests.</p>
+            
+            <h3>Technical Lessons Learned</h3>
+            <p>This project helped me understand that embedded development involves balancing capabilities with constraints. Memory fragmentation concerns led me to avoid complex data structures, which pushed me toward simpler solutions using structs and arrays rather than classes and queues. The controllers stayed on for months without a single crash or noticeable bug!</p>
+            
+            <p>As someone coming from mechanical engineering, tackling embedded systems required starting with basic prototypes and gradually building complexity; starting with through hole prototypes, onto PCB design, SMD assembly, and fumbling around in C++ until I got something useful. It was an incredibly fulfilling project.</p>
+            
+            <div class="image-wrapper">
+                <img src="#" alt="Controllers deployed in apartment" class="project-image">
+                <p class="image-caption">Controllers successfully deployed throughout the apartment</p>
+            </div>
+            
+            <h3>Results</h3>
+            <p>Successfully deployed controllers to every room in the apartment, each running stable firmware with smooth color transitions. The system integrated with existing smart home infrastructure and provided the control flexibility I was looking for.</p>
+            
+            <h3>Links</h3>
+            <p><a href="https://github.com/ljfrank314/ESP32C3_RGB_Controller">GitHub Repository</a></p>
+        </div>
+    </div>
+</div>
 
         <div id="project4" class="project-details">
         <div class="details-content">
