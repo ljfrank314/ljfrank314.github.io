@@ -233,7 +233,7 @@
         </div>
     </div>
 </div>
-
+<!-- THERE ARE GRAMMAR ISSUES UP THE REAR ON THIS ONE JUST FYI \/ \/ \/ \/ -->
 
 <div id="project3" class="project-details">
     <div class="details-content">
@@ -241,7 +241,7 @@
         <h2>ESP32 RGB LED Controller</h2>
         <p class="tech-stack">Embedded Systems • KiCad • C++ • Python • IoT</p>
         <div class="content">
-            <h3>The Challenge: Diving into Embedded Systems</h3>
+            <h3>Overview</h3>
             <p>Coming from mechanical engineering with zero embedded experience, I wanted complete control over the RGB lighting in my college apartment. Rather than buying off-the-shelf controllers, I decided to build my own ESP32-based system from scratch. These controllers can talk to everything from my Apple Watch to my Arch server through simple HTTP requests.</p>
             
             <p>The goal was ambitious: design custom PCBs, write firmware with smooth animations, and deploy controllers to every room. This project forced me completely outside my comfort zone, but gave me hands-on experience with full ownership of both hardware and software.</p>
@@ -252,7 +252,7 @@
             </div>
             
             <h3>Hardware</h3>
-            <p>Started with through-hole components on perfboard to prove the concept. I selected MOSFETs from Digikey using crude but effective methods: set my power supply to 24V (matching the LED strips), measured current draw, and chose components with appropriate voltage/current ratings. I had several SEEED XIAO ESP32-C3's leftover from a simpler project, and implemented them in the prototype.</p>
+            <p>Started with through-hole components on perfboard to prove the concept. I selected MOSFETs from Digikey using a simple method; I set my power supply to 24V (matching the LED strips), measured current draw from the power supply, and chose components with appropriate voltage/current ratings. I had several Seeed XIAO ESP32-C3's leftover from a simpler project, and implemented them in the prototype.</p>
             
             <p>After validating the circuit, I transitioned to SMD PCBs to reduce costs and gain experience. Playing around with my ancient oscilloscope, I found the flat miller region on the rising edge of my mosfets. After further research, (and learning what the hell the miller region was), I decided to implement gate drivers to mitigate switching inefficiencies. Assembly was done with a hot air gun and patience, no reflow oven needed for small quantities.</p>
 
@@ -262,7 +262,7 @@
             </div>
             
             <h3>Software</h3>
-            <p>Built a real-time animation system around HTTP endpoints that could queue color transitions with custom timing curves. The core innovation was using a single mathematical function (found on StackOverflow, of course) with varying the alpha parameter to create different wave shapes:</p>
+            <p>I built a real-time animation system around HTTP endpoints that could queue color transitions with custom timing curves. The core innovation was using a single mathematical function (found on StackOverflow, of course) that allowed for varying a single alpha parameter to create different smoothing curves and wave shapes:</p>
             <ul>
                 <li><strong>α = 1:</strong> Linear interpolation (sawtooth waves)</li>
                 <li><strong>α = 2-10:</strong> Smooth easing functions (sine-like waves)</li>
@@ -275,25 +275,25 @@
             </div>
             
             <h3>Debugging Boot Issues</h3>
-            <p>The controllers frequently got stuck in loops as I learned the basics of c++, making re-flashing difficult. Through debugging, I discovered I'd connected some traces to gpio pins that also served as boot configuration pins. When these pins were pulled high or low by my circuit, the ESP32 would enter different boot modes, making flashing difficult. While the boards functioned when flashed, this was a major roadblock for some time.</p>
+            <p>The controllers frequently got stuck in loops as I learned the basics of C++, making re-flashing difficult. Through debugging, I discovered I'd connected some traces to gpio pins that also served as boot configuration pins. When these pins were pulled high or low by my circuit, the ESP32 would enter different boot modes, making flashing difficult. While the boards functioned when flashed, this was a major roadblock for some time.</p>
             
             <p>Problems like this served as reminders as to how much I have to learn with embedded systems. Little issues like that are learned practically and only through experience.</p>
             
             <h3>Distributed Control & Synchronization</h3>
-            <p>Each controller operated independently with its own web server, but synchronization across rooms was achieved through timed HTTP requests. Since everything ran on the local network, latency was minimal and coordination worked reliably. This architecture allowed control from Python scripts, iOS shortcuts, direct curl commands, any device that could send http requests.</p>
+            <p>Each controller operated independently with its own web server, but synchronization across rooms was achieved through timed HTTP requests. Since everything ran on the local network, latency was minimal and coordination worked reliably. This architecture allowed control from Python scripts, iOS shortcuts, direct curl commands, any device that could send http requests. Most of the animation was done with python scripts I wrote for my Arch Linux server. I also implemented some automation, using a shortcut on ios to call the server to turn on the lights when I turned off my alarm.</p>
             
             <h3>Technical Lessons Learned</h3>
-            <p>This project helped me understand that embedded development involves balancing capabilities with constraints. Memory fragmentation concerns led me to avoid complex data structures, which pushed me toward simpler solutions using structs and arrays rather than classes and queues. The controllers stayed on for months without a single crash or noticeable bug!</p>
+            <p>This project helped me understand that embedded development is about working with constraints. Memory fragmentation concerns led me to avoid complex data structures, which pushed me toward simpler solutions using structs and arrays rather than classes and queues. The controllers stayed on for months without a single crash or noticeable bug!</p>
             
             <p>As someone coming from mechanical engineering, tackling embedded systems required starting with basic prototypes and gradually building complexity; starting with through hole prototypes, onto PCB design, SMD assembly, and fumbling around in C++ until I got something useful. It was an incredibly fulfilling project.</p>
             
             <div class="image-wrapper">
                 <img src="#" alt="Controllers deployed in apartment" class="project-image">
-                <p class="image-caption">Controllers successfully deployed throughout the apartment</p>
+                <p class="image-caption">A controller deployed in my apartment</p>
             </div>
             
             <h3>Results</h3>
-            <p>Successfully deployed controllers to every room in the apartment, each running stable firmware with smooth color transitions. The system integrated with existing smart home infrastructure and provided the control flexibility I was looking for.</p>
+            <p>Successfully deployed controllers to every room in the apartment, each running stable firmware with smooth color transitions. The system ran for months without any downtime and I only had one failed controller.</p>
             
             <h3>Links</h3>
             <p><a href="https://github.com/ljfrank314/ESP32C3_RGB_Controller">GitHub Repository</a></p>
@@ -304,21 +304,35 @@
         <div id="project4" class="project-details">
         <div class="details-content">
             <button class="close-btn" onclick="closeProject('project4')">×</button>
-            <h2>Robotic Arm Controller</h2>
+            <h2>Robot Arm</h2>
             <p class="tech-stack">Python • OpenCV • Kinematics • ROS</p>
             <div class="content">
                 <h3>Overview</h3>
-                <p>Built a computer vision-guided robotic arm system capable of identifying, grasping, and sorting objects by color and shape. The system uses inverse kinematics for precise movement control.</p>
+                <p>I took a robotics and mechatronics class at my school, which provided the opportunity for extra credit: design and present a robotics project of any kind. So long as it pertained to the class in some way, it was fair game. It was extremely open ended, so I took it as a challenge to design a robot arm to manipulate a coffee mug on my desk. From this idea I worked out some requirements.</p>
+
                 
-                <img src="https://via.placeholder.com/800x450/1a1a1a/808080?text=Robotic+Arm+Setup" alt="Robotic Arm Setup" class="project-image">
-                
-                <h3>Technical Details</h3>
+                <h3>Requirements</h3>
                 <ul>
-                    <li>6-DOF arm with custom inverse kinematics solver</li>
-                    <li>Object detection using OpenCV and custom trained YOLO model</li>
-                    <li>Trajectory planning with collision avoidance</li>
-                    <li>ROS integration for modular control architecture</li>
+                    <li>Ability to lift and manipulate a full coffee mug with a weight of 5.5 N</li>
+                    <li>Move objects over the full 3 foot range of my desk</li>
+                    <li>Driven with stepper motors</li>
+                    <li>At least 5 degrees of freedom including the end effector</li>
                 </ul>
+                
+                <div class="image-wrapper">
+                    <img src="#" alt="Robot Arm CAD" class="project-image">
+                    <p class="image-caption">The detailed CAD model of the robot arm.</p>
+                </div>
+                
+                <div class="image-wrapper">
+                    <img src="#" alt="Hand calculations" class="project-image">
+                    <p class="image-caption">The quick hand calcs done to spec the motors</p>
+                </div>
+                <p>After the detailed design of the arm was completed, I made a model with simplified geometry to make a URDF model. This was done easily using Onshape-to-Robot. For simulation, I went with the MATLAB robotics toolbox. I had used ROS for previous projects, and wanted to try something different.</p>
+
+                <p>As I only had a few weeks to work on the whole project, the simulation ended up being very simple; inverse kinematics are solved to put the end effector in preset points, the motion planning then just interpolates the joints to move from one position to the other. So the target points are solved for in task space but movement is done in joint space.</p>
+
+
                 
                 <h3>Demo Video</h3>
                 <div class="video-container">
