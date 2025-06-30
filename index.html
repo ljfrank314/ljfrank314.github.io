@@ -288,8 +288,8 @@
             <p>As someone coming from mechanical engineering, tackling embedded systems required starting with basic prototypes and gradually building complexity; starting with through hole prototypes, onto PCB design, SMD assembly, and fumbling around in C++ until I got something useful. It was an incredibly fulfilling project.</p>
             
             <div class="image-wrapper">
-                <img src="#" alt="Controllers deployed in apartment" class="project-image">
-                <p class="image-caption">A controller deployed in my apartment</p>
+                <img src="solderStation.JPG" alt="First controllers immediately after soldering" class="project-image">
+                <p class="image-caption">The first two controllers after completion</p>
             </div>
             
             <h3>Results</h3>
@@ -320,32 +320,29 @@
                 </ul>
                 
                 <div class="image-wrapper">
-                    <img src="#" alt="Robot Arm CAD" class="project-image">
-                    <p class="image-caption">The detailed CAD model of the robot arm.</p>
+                    <img src="robotArmHandCalcs.png" alt="Hand calculations" class="project-image">
+                    <p class="image-caption">The quick hand calcs done to spec the motors</p>
                 </div>
                 
                 <div class="image-wrapper">
-                    <img src="#" alt="Hand calculations" class="project-image">
-                    <p class="image-caption">The quick hand calcs done to spec the motors</p>
+                    <img src="coffeeArm-CAD.png" alt="Robot Arm CAD" class="project-image">
+                    <p class="image-caption">The detailed CAD model of the robot arm.</p>
                 </div>
-                <p>After the detailed design of the arm was completed, I made a model with simplified geometry to make a URDF model. This was done easily using Onshape-to-Robot. For simulation, I went with the MATLAB robotics toolbox. I had used ROS for previous projects, and wanted to try something different.</p>
+
+                <p>After the detailed design of the arm was completed, I made a model with simplified geometry to make a URDF model. This was done easily using onshape-robotics-toolkit. For simulation, I went with the MATLAB robotics toolbox. I had used ROS for previous projects, and wanted to try something different.</p>
 
                 <p>As I only had a few weeks to work on the whole project, the simulation ended up being very simple; inverse kinematics are solved to put the end effector in preset points, the motion planning then just interpolates the joints to move from one position to the other. So the target points are solved for in task space but movement is done in joint space.</p>
 
-
-                
-                <h3>Demo Video</h3>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="image-wrapper">
+                <img src="robotArmAnim.gif" alt="Animation from simulation" class="project-image">
+                <p class="image-caption">During the live demo I did for the class, someone asked me to make the robot pour the mug on my lap</p>
                 </div>
                 
                 <h3>Results</h3>
-                <p>Achieved 92% accuracy in object sorting tasks with an average cycle time of 8 seconds per object. System can handle objects ranging from 2cm to 15cm in size.</p>
-                
-                <img src="https://via.placeholder.com/800x450/1a1a1a/808080?text=Object+Detection+Results" alt="Object Detection Results" class="project-image">
+                <p>Gained experience working with Matlab robotics toolbox, and applied most of what I learned in the class. Received full extra credit!</p>
                 
                 <h3>Links</h3>
-                <p><a href="#">GitHub Repository</a> • <a href="#">Technical Paper</a></p>
+                <p><a href="https://github.com/neurobionics/onshape-robotics-toolkit">Onshape robotics toolkit</a></p>
             </div>
         </div>
     </div>
